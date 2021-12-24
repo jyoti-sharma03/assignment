@@ -1,0 +1,17 @@
+
+body { background-color: #F5F6FA ; overflow: hidden;}
+.p-d-0{ padding: 0;}
+.d-flex{ display: flex !important;}
+.justify-content-between{ justify-content: space-between;}
+.mrg-t-b-50{ margin: 50px 0}
+.align-item-end{ align-items: flex-end;}
+.align-item-center{align-items: center;}
+.space-around{ justify-content: space-around;}
+.heading{
+    font-weight: 600;
+}
+@media only screen and (max-width: 768px) {
+    .heading{
+        font-weight: normal;
+    }
+}

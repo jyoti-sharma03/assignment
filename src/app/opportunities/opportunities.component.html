@@ -1,0 +1,56 @@
+<div class="opportunities-section mrg-t-b-50">
+    <section class="section-header">
+      <div class="row">
+        <div class="col-md-6">
+            <span class="heading">Opportunities</span>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex justify-content-between">
+            <div class="opportunities-bar">
+                <ul>
+                    <li (click)="toggleOpportunities('1')"><span [ngClass]="{ 'activeNav': selectedNavType == 1 }">Elgible</span></li>
+                    <li (click)="toggleOpportunities('2')"><span [ngClass]="{ 'activeNav': selectedNavType == 2 }">Hot</span></li>
+                    <li (click)="toggleOpportunities('3')"><span [ngClass]="{ 'activeNav': selectedNavType == 3 }">New</span></li>
+                </ul>
+              </div>
+              <div class="filter-container">
+                  <img src="assets/images/filter.png">
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+     <div id="smalldescOpport"> 
+      <div *ngFor="let data of opportData" class="section-detail d-flex justify-content-between">
+        <div class="d-flex">
+            <div *ngIf="data.new">
+                <span class="dot"></span>
+            </div>
+            <div class="opport-details">
+                <div class="opport-detail-title mrg-b-5">
+                    <span class="profile-organization"> {{data.org}}- </span>
+                    <span class="profile-department"> {{data.department}}</span>
+                    <span *ngIf="data.hot_deal" class="hot-deal-box"><img src="assets/images/hot-deal.png"></span>
+                </div>
+                <div class="opport-detail-description mrg-2">
+                    <span> {{data.date}}</span>
+                    <span> {{data.time_duration}}</span>
+                    <span> {{data.location}}</span>
+                </div>
+                <div class="mrg-t-20">
+                    <button class="opportunities-btns btn-apply">Apply</button>
+                    <button class="opportunities-btns btn-gray">Not Interested</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <span> {{data.price}}</span>
+        </div>
+      </div>
+     </div>
+      <div class="view-all-box">
+        <span (click)="expandOpportunities()">View All ({{opportData.length}})</span>
+      </div>
+    </section>
+</div>

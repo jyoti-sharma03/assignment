@@ -1,0 +1,127 @@
+
+.section-header{
+    margin: 20px 0;
+}
+
+.opportunities-bar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.opportunities-bar ul li{
+    float: left;
+    margin-right: 20px;
+}
+.opportunities-bar ul li span{
+    cursor: pointer;
+    color :#CECFD1;
+    font-size: 12px;
+    display: inline-block;
+}
+.filter-container{
+    height: 15px;
+    width: 15px;
+    padding: 2px;
+}
+.filter-container img{
+    width: 100%;
+}
+.section-detail{
+    font-size: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #F55F5F;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .opportunities-btns{
+    border: none;
+    width: 125px;
+    margin: 0 20px 0 0;
+    padding: 3px;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+  .btn-apply{
+      background-color: #F68E46;
+      color: #fff;
+  }
+  .btn-gray{
+      background-color: #D8D8D8;
+      color: #B9B9B9;
+  }
+  .opport-details{
+      padding: 0 20px;
+  }
+  .profile-department{
+    text-transform: capitalize;
+  }
+  .profile-organization{
+      font-weight: 600;
+  }
+  .mrg-b-5{
+      margin-bottom: 5px;
+  }
+  .mrg-t-20{
+      margin-top: 20px;
+  }
+  .opport-detail-description span{ 
+    text-transform: capitalize;
+    margin-right: 20px;
+  }
+  .opport-detail-description span:not(:first-child)::before{
+    content:"\A";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background: #B9B9B9;
+    display:inline-block;
+  }
+  .hot-deal-box{
+      margin-left: 5px;
+  }
+  .hot-deal-box img{
+      width: 15px;
+  }
+  .activeNav{
+      color: #000 !important;
+      font-weight: 600;
+  }
+  .view-all-box{
+      margin-top: 20px;
+      text-align: center;
+      color: royalblue;
+      font-size: 14px;
+  }
+  #smalldescOpport{
+    max-height: 500px;
+    overflow: hidden;
+    transition: all .3s ease;
+  }
+  #smalldescOpport.expand {
+    max-height: 700px;
+    overflow: auto;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .section-detail>div:last-child{
+       display: none;
+    }
+    .view-all-box span{
+        border: 1px solid;
+        padding: 5px 25px;
+        border-radius: 20px;
+        color: #F79F3B;
+    }
+    .opportunities-bar ul{
+        display: none;
+    }
+    .filter-container{
+        padding: 0;
+    }
+  }

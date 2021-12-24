@@ -1,0 +1,72 @@
+<div class="container-fluid p-d-0 app-containew-box">
+            <div class="top-header-responsive">
+               <div class="header-bar">
+                  <div class="d-flex justify-content-between">
+                     <div class="header-logo-container"><img src="assets/images/logo.jpeg"></div>
+                     <div class="d-flex align-item-center header-left-sec">
+                        <span class="header-notification"><i class="fas fa-bell"></i></span>
+                        <span class="notification-counter">{{commonServices.notifications.length}}</span>
+                        <span class="header-profile-img"><img src="assets/images/profile-image.jpeg" width="35px"></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="opportunities-boxes-con d-flex">
+                   <div class="opport-box">
+                      <span>New Opportunities</span>
+                      <div class="opport-count-box">
+                         <span>{{commonServices.userData.length}}</span>
+                      </div>
+                   </div>
+                   <div class="opport-box">
+                     <span>New Opportunities</span>
+                     <div class="opport-count-box">
+                        <span>{{commonServices.userData.length}}</span>
+                     </div>
+                  </div>
+                  <div class="opport-box">
+                     <span>New Opportunities</span>
+                     <div class="opport-count-box">
+                        <span>{{commonServices.userData.length}}</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="side-bar-container">
+               <div class="logo-box">
+                  <img src="assets/images/logo.jpeg" width="200px">
+               </div>
+            <div class="nav-box">
+               <ul>
+                   <li routerLinkActive="active" routerLink = "/dashboard"> <i class="fas fa-home"></i> <span>Dashboard</span></li>
+                   <li routerLinkActive="active" routerLink = "/profile"><i class="fas fa-briefcase"></i><span> Profile</span></li>
+                   <li routerLinkActive="active" routerLink = "/opportunities"><i class="far fa-user"></i><span>Opportunities</span> <span class="side-nav-opport">{{commonServices.userData.length}}</span></li>
+               </ul>
+            </div>
+        </div>
+        <div class="dashboard-box">
+           <div class="container-fluid">
+             <div class="row">
+               <div class="col-md-12">
+                  <router-outlet></router-outlet>
+                 </div>
+             </div>
+           </div>
+        </div>
+        <div class="right-bar-section pd-r-0">
+         <app-notification></app-notification>
+         <div class="contact-section">
+            <img src="assets/images/contact-section-image.jpeg"> 
+            <span class="heading">Need held ?</span>
+            <span class="sub-text">Do you have any problem and want to consult?</span>
+            <button class="contact-btn"> Contact now</button>
+         </div>
+      </div>
+      <div class="responsive-bar-bottom">
+       <div class="d-flex space-around">
+         <div class="home-box"><i class="fas fa-home"></i> home</div>
+         <div><i class="fas fa-briefcase"></i></div>
+         <div><i class="far fa-user"></i></div>
+       </div>
+     </div>
+    </div>
+    

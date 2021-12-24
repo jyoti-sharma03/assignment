@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row">
+     <div class="notification-container">
+        <div class="pd-20">
+            <span class="heading">Notification</span>
+            <div class="all-notification-detail" id="smalldescNotification">
+               <ul id="progress">
+                   <li *ngFor="let data of notifications">
+                       <div class="node"></div>
+                       <span>{{data.test}}</span> 
+                   </li>
+               </ul>
+            </div>
+            <div class="view-more-box">
+                <span class="view-more" (click)="expandNotification()">View More</span>
+            </div>
+        </div>
+     </div>
+  </div>
+</div>

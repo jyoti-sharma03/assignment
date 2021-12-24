@@ -1,0 +1,65 @@
+<div class="ongoing-section">
+  <div class="ongoing-header">
+      <div class="d-flex justify-content-between"> 
+          <div>
+            <span class="heading">Ongoing Applications</span>
+          </div>
+            <div class="filter-container">
+                <img src="assets/images/filter.png">
+            </div>
+      </div>
+  </div>
+  <div class="ongoing-detail-section" id="smalldesc">
+    <div *ngFor="let data of applicationData; let i = index" class="profileDetail" id="{{'profileDetail' + i}}" (click)="expandProfileDetail(i)">
+        <div class="ongoing-container pd-20 bdr-btm">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <div class="mrg-b-8">
+                        <span class="test-text">Test - </span>
+                        <span> {{data.org}} - </span>
+                        <span> {{data.department}}</span>
+                    </div>
+                    <div class="date-time-container mrg-b-8">
+                        <span>
+                            <i class="far fa-calendar-alt"></i>
+                            {{data.date}}
+                        </span>
+                        <span>
+                            <i class="far fa-clock"></i>
+                            {{data.time}}
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between align-item-end ongoing-container pd-20">
+            <div class="ongoing-detail-table">
+                <table>
+                    <tr>
+                      <th>Question Type</th>
+                      <td>{{data.q_type}}</td>
+                    </tr>
+                    <tr>
+                      <th>Duration</th>
+                      <td>{{data.dur}}</td>
+                    </tr>
+                    <tr>
+                      <th>venue</th>
+                      <td>{{data.location}}</td>
+                    </tr>
+                  </table>
+            </div>
+            <div class="view-datial">
+                <i class="far fa-address-card"></i>
+                <span class="mrg-l-5">View Detail</span>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="view-all-box">
+    <span (click)="expandOptions()">View All ({{applicationData.length}})</span>
+  </div>
+</div>
